@@ -329,7 +329,7 @@
   .section__image{
     inline-size: 100%;
     block-size: 100%;
-}
+  }
   .footer::after{
     inset-inline-start: 724px;
   inset-block-end: -3847px;
