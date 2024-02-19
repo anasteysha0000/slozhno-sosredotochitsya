@@ -135,9 +135,16 @@
   gap: 50px;
   padding: 0px 10px;
 }
-.section{
-  display: flex;
-  flex-direction: column;
+.section__why{
+  display: grid;
+  gap: 20px;
+}
+.section__what{
+  display: grid;
+  gap: 20px;
+}
+.section__how{
+  display: grid;
   gap: 20px;
 }
 .section-title{
@@ -193,10 +200,12 @@
   gap: 10px;
 }
 .section__image{
+  object-fit: cover;
+  object-position: center;
   max-width: 355px;
 }
 .footer{
-  min-height: 578px;
+  min-height: 590px;
   display: grid;
   
 }
@@ -234,42 +243,107 @@
   inset-inline-start: 11px;
   inset-block-end: -6090px;
 }
-@media (768px<=width<1024px){
+@media (min-width: 768px){
   .header{
-    min-width:728px;
-    padding: 0px;
+    min-height:1024px;
+    padding: 20px;
   }
   .header__theme-menu {
-    margin-block-start: 166px;
-    margin-right: 12px;
+    margin-block-start: 170px;
+    margin-right: 3px;
   }
   .header__rec-text{
-    inset-block-start: 16px;
-    inset-inline-end: 39px;
+    inset-block-start: 21px;
+    inset-inline-end: 49px;
   }
-  .header::after{
-    inset-block-start: 14px;
-    inset-inline-end: 12px;
+  .decorated-zone::after{
+    inset-block-start: 17px;
+    inset-inline-end: 19px;
   }
-  .header::before{
-    inset-inline-start: 14px;
-    inset-block-end: -67px;
+  .decorated-zone::before{
+    inset-inline-start: 20px;
+    inset-block-end: 21px;
   }
   .header__title{
-    margin-top: 158px;
-    margin-inline-start: -7px;
+    margin-inline-start: -19px;
     justify-self: flex-start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .title-style{
-    margin-top: 4px;
-    margin-right: 12px;
-  }
-  .title-decor{
+    margin-right: 1px;
     max-width: 364px;
-    max-height: 117px;
+  }
+  
+  .main__section{
+    gap: 80px;
+    padding: 18px 20px
+  }
+  .section__why{
+    grid-template-columns: 1fr 2fr;
+  }
+  .section__what{
+    display: flex;
+    flex-direction: column;
+  }
+  .section__how{
+    grid-template-columns: 1fr 2fr;
+  }
+  .section-title{
+    max-width: 236px;
+  }
+  .recommendations .title-decor{
+    min-width: 472px;
+  }
+  .gallery{
+    gap: 0px;
+  }
+  .gallery__images{
+    display: grid;
+    grid-template-rows: repeat(4, minmax(min-content,max-content));
+    grid-template-columns: repeat(3, minmax(min-content,max-content));
+    gap: 20px;
+  }
+  .section__image{
+    max-width: 479px;
+  }
+  .sunset{
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .ice-cream{
+    grid-column: 3/4;
+    grid-row: 2/4;
+  }
+  .tape{
+    grid-column: 1/2;
+    grid-row: 3/5;
+  }
+  .books{
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .street{
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+  .section__image{
+    inline-size: 100%;
+    block-size: 100%;
+}
+  .footer::after{
+    inset-inline-start: 724px;
+  inset-block-end: -3847px;
+  }
+  .footer::before{
+    inset-inline-start: 21px;
+    inset-block-end: -4805px;
+  }
+  .footer__title{
+    margin-inline-start: 206px;
+    margin-block-start: 465px;
   }
 }
+
 @media (min-width:1024px) {
   .header{
     min-width:728px;
@@ -309,56 +383,4 @@
     max-width: 491px;
     max-height: 70px;
   }
-}
-/*
-@media (768px<=width<1024px){
-  .header{
-    padding: 0px 12px;
-  }
-  .header::before {
-    inset-inline-start: 14px;
-    inset-block-end: -711px;
-  }*/
-  /*.header__theme-menu-list{
-    flex-direction: column;
-    margin: 41.5px 0px 0px 160px;
-    justify-content: end;
-  }
-  .header__theme-menu{
-    grid-column: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-}
-@media (375px<=width<768px){
-  .header::before {
-    inset-inline-start: 14px;
-    inset-block-end: -764px;
-  }
-  .header {
-    padding: 10px 10px;
-  }
-  .header__rec-text{
-    inset-block-start: 5px;
-    inset-inline-end: 30px;
-  }
-  .header::after{
-    inset-block-start: 2px;
-    inset-inline-end: 2px;
-  }
-  .header::before{
-    inset-inline-start: 2px;
-    inset-block-end: -474px;
-  }
-  .header__theme-menu-list{
-    flex-direction: column;
-    margin: 55.5px 0px 0px 6px;
-    justify-content: end;
-  }
-  .header__theme-menu{
-    grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-  */
 }
