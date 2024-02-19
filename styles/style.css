@@ -294,6 +294,7 @@
   }
   .gallery {
     gap: 0px;
+    flex-direction: column;
   }
   .gallery__images {
     display: grid;
@@ -337,6 +338,9 @@
   .footer__title {
     margin-inline-start: 206px;
     margin-block-start: 465px;
+  }
+  .footer{
+    min-height: 1024px;
   }
 }
 
