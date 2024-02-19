@@ -3,70 +3,70 @@
 .page {
   /* сохраните в разметке и стилях класс page. 
   На его основе работает скрипт. */
-  --main-text-color: #F1B2CE;
-  --title-color: #DB00FF;
-  --title-shadow: #FF0070;
-  --background-color: #000028;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  --text-color__rec:#FF0070;
-  --font-family__rec: 'IBM Plex Mono';
+  display: grid;
+  gap: 40px;
+  
 }
 .header{
-  padding: 2px;
+  padding: 10px;
   position: relative;
   display: grid;
-  grid-template-rows: 1fr auto 1fr auto;;
+  grid-template-rows: 1fr auto 1fr auto;
   justify-items: end;
   align-items: start;
+  min-height: 668px;
 }
 .header__rec-text{
   position: absolute;
   align-items: center;
-  inset-block-start: 5px;
-  inset-inline-end: 30px;
+  inset-block-start: 10px;
+  inset-inline-end: 39px;
   text-transform: uppercase;
-  font-family: var(--font-size__rec, sans-serif);
-  color: var(--text-color__rec);
+  font-family: var(--font-family, sans-serif);
+  color: var(--highlight_color, #FF0070);
+  font-size: var(--font-size);
 }
 .header__rec-text::after {
   content: "";
   position: absolute;
   inline-size: 9px;
   block-size: 9px;
-  box-shadow: 0px 0px 4px 2px var( --text-color__rec);
-  background: var( --text-color__rec);
+  box-shadow: 0px 0px 4px 2px var(--highlight_color, #FF0070);
+  background: var(--highlight_color, #FF0070);
   border-radius: 50%;
-  inset-block-start: 4px;
-  inset-inline-end: -18px;
+  inset-block-start: 8px;
+  inset-inline-end: -19px;
 }
-.header::after{
+.decorated-zone::after{
   content: "";
   position: absolute;
-  border-right: 1px solid  var( --text-color__rec);
-  border-top: 1px solid var( --text-color__rec);
+  display: block;
+  border-right: 1px solid  var(--highlight_color, #FF0070);
+  border-top: 1px solid var(--highlight_color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: 2px;
-  inset-inline-end: 2px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
 }
-
-.header::before{
+.decorated-zone::before{
   content: "";
   position: absolute;
-  border-right: 1px solid rgb(255, 0, 112);
-  border-top: 1px solid rgb(255, 0, 112);
+  display: block;
+  border-right: 1px solid var(--highlight_color, #FF0070);
+  border-top: 1px solid var(--highlight_color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
   transform: rotate(180deg);
-  inset-inline-start: 3px;
-  inset-block-end: 31px;
+  inset-inline-start: 11px;
+  inset-block-end: 11px;
 }
 .header__theme-menu {
-  margin-block-start: 47px;
+  margin-block-start: 62px;
 }
 .header__theme-menu-list {
   display: flex;
@@ -77,48 +77,162 @@
 }
 .header__theme-menu-button{
   background-color: transparent;
-  /*текст*/
-  color: var(--text-color__rec);
-  font-family: var(--font-family__rec,sans-serif);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: lowercase;
-  text-align: center;
   border: none;
   width: 70px;
   height: 26px;
   padding: 0px 13px;
   list-style-type: none;
+  /*текст*/
+  color: var(--highlight_color, #FF0070);
+  font-family: var(--font-family,sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: lowercase;
+  text-align: center;
+}
+.header__theme-menu-button:focus{
+  outline: none;
+}
+.header__theme-menu-button:focus-visible{
+  border-block-end: 1px solid var(--highlight_color, #FF0070);
+}
+.header__theme-menu-button:hover{
+  border: 1px solid var(--highlight_color, #FF0070);
+  color: var(--highlight_color, #FF0070);
 }
 .header__theme-menu-button_active {
     border: 1px solid currentColor;
     pointer-events: none;
 }
 .header__title{
-  color: rgb(219, 0, 255);
+  color: var(--title-color, #DB00FF);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: var(--font-family__rec, sans-serif);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--font-family, sans-serif);
+  text-shadow: 4px 4px 0 var(--highlight_color, #FF0070);
   font-weight: 700;
   line-height: 82.5%;
-  margin-block-start: 54px;
+  margin-block-start: 2px;
 }
 .title-block{
   align-self: center;
 }
 .title-style{
-  color: rgb(0, 0, 40);
-  font-family: var(--font-family__rec,sans-serif);
+  color: var(--background-color, #000028);
+  font-family: var(--font-family,sans-serif);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  letter-spacing: 0%;
   text-align: left;
-  margin-block-start: -89px;
+  margin-block-start: -2px;
 }
 .title-decor{
-  background-color: rgb(255, 0, 112);
+  background-color: var(--highlight_color,#FF0070);
+}
+.main__section{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0px 10px;
+}
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-title{
+  color: var(--highlight_color);
+  font-family: var(--font-family, sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+}
+.section-reasons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.reason-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /*текст*/
+  line-height: 23.4px;
+  text-align: left;
+  font-family: var(--font-family, sans-serif);
+  font-size: var(--font-size, 18px);
+}
+.section-subtitle{
+  color: var(--background-color, #000028);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  font-family: var(--font-family, sans-serif);
+  font-size: var(--font-size, 18px);
+}
+.outline{
+  font-weight: 400;
+}
+.section-description{
+  color: var(--main-text-color, #F1B2CE);
+  font-weight: 400;
+}
+.section__links{
+  text-shadow: 2px 2px 0 var(--highlight_color, #FF0070);
+  text-decoration: none;
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gallery__images{
+  display: grid;
+  gap: 10px;
+}
+.section__image{
+  max-width: 355px;
+}
+.footer{
+  min-height: 578px;
+  display: grid;
+  
+}
+.footer__title{
+  margin-inline-start: 15px;
+  margin-block-start: 287px;
+  color: rgb(219, 0, 255);
+  font-family: var(--font-family);
+   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-align: left;
+}
+
+.footer::after{
+  content: "";
+  position: absolute;
+  display: block;
+  border-right: 1px solid  var(--highlight_color, #FF0070);
+  border-top: 1px solid var(--highlight_color, #FF0070);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: 341px;
+  inset-block-end: -5469px;
+}
+.footer::before{
+  content: "";
+  position: absolute;
+  display: block;
+  border-right: 1px solid var(--highlight_color, #FF0070);
+  border-top: 1px solid var(--highlight_color, #FF0070);
+  inline-size: 25px;
+  block-size: 25px;
+  transform: rotate(180deg);
+  inset-inline-start: 11px;
+  inset-block-end: -6090px;
 }
 @media (768px<=width<1024px){
   .header{
@@ -145,7 +259,7 @@
     margin-top: 158px;
     margin-inline-start: -7px;
     justify-self: flex-start;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .title-style{
     margin-top: 4px;
