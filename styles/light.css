@@ -6,22 +6,35 @@
 .page.theme_light {
   --main-text-color: #353430;
   --title-color: #ffc2e6;
-  --highlight_color: #ff0070;
   --title-decor: #ff8dcb;
+  --title-shadow: var(--title-decor);
   --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
   --font-family: "IBM Plex Mono";
   --font-size: 18px;
+  --menu-color: var(--main-text-color);
+  --menu-color-hover: rgba(50, 49, 45, 0.4);
+  --corner-color: var(--main-text-color);
+  --accent-color: var(--main-text-color);
+  --subtitle-color: var(--main-text-color); 
 }
 @media (prefers-color-scheme: light) {
   :root {
     --main-text-color: #353430;
     --title-color: #ffc2e6;
-    --highlight_color: #ff0070;
     --title-decor: #ff8dcb;
+    --title-shadow: var(--title-decor);
     --background-color: #fff1f7;
     --background-image: url(../images/cover-image-light.png);
     --font-family: "IBM Plex Mono";
     --font-size: 18px;
+    --menu-color: var(--main-text-color);
+    --menu-color-hover: rgba(50, 49, 45, 0.4);
+    --corner-color: var(--main-text-color);
+    --accent-color: var(--main-text-color);
+    --subtitle-color: var(--main-text-color);
   }
+}
+.page.theme_light .header__rec-text {
+  display: none;
 }

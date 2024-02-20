@@ -3,11 +3,18 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-text-color: #f1b2ce;
+  --main-text-color: #f1b2ce; /*поправить на большие буквы!!!*/
   --title-color: #db00ff;
+  --title-decor:  #ff0070;
+  --title-shadow: var(--title-decor);
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
-  --highlight_color: #ff0070;
   --font-family: "IBM Plex Mono";
   --font-size: 18px;
+  --menu-color: var(--title-decor);;
+  --menu-color-hover: rgba(255, 0, 112, 0.4);
+  --corner-color: var(--title-decor);
+  --accent-color: var(--title-decor);
+  --subtitle-color: var(--background-color);
+  --text-color-rec: var(--title-decor);
 }
