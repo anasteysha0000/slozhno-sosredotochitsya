@@ -17,7 +17,7 @@
   --background-image: url(../images/cover-image-dark.png);
   --font-family: "IBM Plex Mono";
   --font-size: 18px;
-  --menu-color: var(--title-decor);;
+  --menu-color: var(--title-decor);
   --menu-color-hover: rgba(255, 0, 112, 0.4);
   --corner-color: var(--title-decor);
   --accent-color: var(--title-decor);

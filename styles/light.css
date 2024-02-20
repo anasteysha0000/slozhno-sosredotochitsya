@@ -16,7 +16,7 @@
   --menu-color-hover: rgba(50, 49, 45, 0.4);
   --corner-color: var(--main-text-color);
   --accent-color: var(--main-text-color);
-  --subtitle-color: var(--main-text-color); 
+  --subtitle-color: var(--main-text-color);
 }
 @media (prefers-color-scheme: light) {
   :root {
