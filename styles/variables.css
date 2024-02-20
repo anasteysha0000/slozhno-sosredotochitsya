@@ -3,11 +3,11 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-text-color: #F1B2CE;
-  --title-color: #DB00FF;
+  --main-text-color: #f1b2ce;
+  --title-color: #db00ff;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
-  --highlight_color:#FF0070;
-  --font-family: 'IBM Plex Mono';
+  --highlight_color: #ff0070;
+  --font-family: "IBM Plex Mono";
   --font-size: 18px;
 }

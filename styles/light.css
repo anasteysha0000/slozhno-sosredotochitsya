@@ -3,14 +3,14 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.page.theme_light{
+.page.theme_light {
   --main-text-color: #353430;
   --title-color: #ffc2e6;
   --highlight_color: #ff0070;
   --title-decor: #ff8dcb;
   --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
-  --font-family: 'IBM Plex Mono';
+  --font-family: "IBM Plex Mono";
   --font-size: 18px;
 }
 @media (prefers-color-scheme: light) {
@@ -21,7 +21,7 @@
     --title-decor: #ff8dcb;
     --background-color: #fff1f7;
     --background-image: url(../images/cover-image-light.png);
-    --font-family: 'IBM Plex Mono';
+    --font-family: "IBM Plex Mono";
     --font-size: 18px;
   }
 }
