@@ -241,7 +241,7 @@
   inset-inline-start: 11px;
   inset-block-end: -6090px;
 }
-@media (768px<=width<1024) {
+@media (min-width: 728px) and (width<1024px){
   .header {
     min-height: 1024px;
     padding: 20px;
