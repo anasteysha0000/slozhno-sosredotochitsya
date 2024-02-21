@@ -216,7 +216,7 @@
   margin-inline-start: 4px;
   margin-block-start: 287px;
   color: var(--title-color, #db00ff);
-  font-family: var(--font-family);
+  font-family: var(--font-family, monospace);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
@@ -226,7 +226,7 @@
 @media (min-width: 728px) and (width<1024px) {
   .header {
     min-height: 1024px;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
   .header__theme-menu {
     margin-block-start: 170px;
@@ -244,12 +244,7 @@
     inset-inline-start: 20px;
     inset-block-end: 18px;
   }
-  .header__title {
-    position: relative;
-    inset-inline-end: 172px;
-  }
   .title-style {
-    margin-right: 1px;
     inline-size: 364px;
   }
   .section__what {
@@ -281,11 +276,11 @@
 @media (min-width: 1024px) {
   .header {
     min-height: 768px;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
   .header__theme-menu {
     justify-self: center;
-    margin-right: 1px;
+    margin-inline-start: 18px;
     margin-block-start: 0px;
   }
   .header__rec-text {
@@ -302,10 +297,6 @@
   .decorated-zone::before {
     inset-inline-start: 21px;
     inset-block-end: 22px;
-  }
-  .header__title {
-    position: relative;
-    inset-inline-end: 253px;
   }
   .title-style {
     margin-top: 1px;
@@ -340,6 +331,7 @@
 @media (min-width: 728px) {
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    justify-self: start;
   }
   .main__section {
     gap: 80px;
@@ -356,7 +348,6 @@
     flex-direction: column;
   }
   .gallery__images {
-    display: grid;
     grid-template-rows: repeat(4, minmax(min-content, max-content));
     grid-template-columns: repeat(3, minmax(min-content, max-content));
     gap: 20px;
